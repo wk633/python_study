@@ -57,4 +57,68 @@
    hanoi(3,'A','B','C')
    ```
 
+3. 可变参数
+
+   ```python
+   def average(*args):
+       if len(args)!=0:
+           return sum(args)*1.0/len(args)
+       else:
+           return 0.0
+
+   print average()
+   print average(1, 2)
+   print average(1, 2, 2, 3, 4)
+   ```
+
+
+
+### 迭代
+
+1. 迭代dict对象
+
+   ```python
+   # 值迭代
+   d.values()
+
+   # iter值迭代
+   d.itervalues()
+   ```
+
    ​
+
+2. 迭代key-value对
+
+   ```python
+   d.items()
+   d.iteritems()
+   ```
+
+
+
+3. 生成列表
+
+   ```python
+   [x * x for x in range(1, 100, 2)]
+   ```
+
+4. 条件过滤
+
+   ```Python
+   [x * x for x in range(1, 11) if x % 2 == 0]
+
+   print [100*n1+10*n2+n3 for n1 in range(1,10) for n2 in range(0,10) for n3 in range(0,10) if n1==n3]
+   ```
+
+
+
+
+
+
+
+
+
+### 零散知识点
+
+1. isinstance(x, str) 可以判断变量 x 是否是字符串
+2. 字符串的`upper()`方法可以用于转换成大写
