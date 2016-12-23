@@ -143,36 +143,36 @@
 
    于是想到高阶函数，可以编写一个高阶函数，接收一个函数对其包装，然后返回一个新函数
 
-   ```python
-   def f1(x):
+```python
+ def f1(x):
    	return x*2
 
    # new_fn即用高阶函数实现了装饰器的目的
-   def new_fn(f):
+def new_fn(f):
    	def fn(x):
    		print 'xxxxx'
    		return f(x)
    	return fn
 
-   f1 = new_fn(f1)
-   print f1(5)
-   ```
+f1 = new_fn(f1)
+print f1(5)
+```
 
-   ​
+   
 
    Python内置的@语法就是为了简化装饰器的调用
 
-   ```python
-   @new_fn
-   def f1(x):
+```python
+@new_fn
+def f1(x):
    	return x*2
 
 
-   # 以上代码的功效于
-   def f1(x):
-   	return x*2
-   f1 = new_fn(f1
-   ```
+# 以上代码的功效于
+def f1(x):
+    return x*2
+f1 = new_fn(f1
+```
 
 ​	
 
@@ -332,8 +332,8 @@ if __name__ == '__main__':
 ### functools模块
 
 1. partial
-2. Update_wrapper
-3. wrappers
+2. update_wrapper
+3. wraps
 4. reduce
 5. cmp_to_key
 6. Total_ordering
