@@ -154,7 +154,7 @@ AttributeError: 'Student' object has no attribute 'grade'
 
 ### 类实例变可调用对象
 
-```
+```python
 class Person(object):
     def __init__(self, name, gender):
         self.name = name
