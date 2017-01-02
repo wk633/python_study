@@ -1,0 +1,7 @@
+用于实现 thread local object 并提供connection info
+
+首先理解下thread local
+
+全局变量local_school是一个ThreadLocal对象，每个thread都可以读写它的student属性，但会不影响。可以这么理解每个thread处理的student属性都是一个局部变量，可以任意读写，不用管锁的问题。
+
+ThreadLocal最常用的地方就是为每个线程绑定一个数据库连接、http请求等，这样这个线程所有调用的处理函数都可以用到这些资源
