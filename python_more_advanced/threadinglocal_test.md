@@ -1,0 +1,2 @@
+全局变量local_school是一个ThreadLocal对象，在thread内都可以读写，但是它的每个属性都是线程的局部变量
+ThreadLocal最常见的应用是为每个线程绑定一个数据库连接。
